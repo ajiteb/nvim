@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- Customize Mason plugins
 
 ---@type LazySpec
@@ -11,7 +9,19 @@ return {
     opts = function(_, opts)
       -- add more things to the ensure_installed table protecting against community packs modifying it
       opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
+        "ansiblels",
+        "azure_pipelines_ls",
+        "bashls",
+        "dockerls",
+        "gopls",
+        "helm_ls",
+        "jqls",
+        "jsonls",
         "lua_ls",
+        "marksman",
+        "pyright",
+        "vimls",
+        "yamlls",
         -- add more arguments for adding more language servers
       })
     end,
@@ -23,7 +33,11 @@ return {
     opts = function(_, opts)
       -- add more things to the ensure_installed table protecting against community packs modifying it
       opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
+        "ansible-lint",
         "prettier",
+        "prettierd",
+        "shellcheck",
+        "shfmt",
         "stylua",
         -- add more arguments for adding more null-ls sources
       })
