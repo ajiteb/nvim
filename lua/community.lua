@@ -12,6 +12,10 @@ return {
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.helm" },
   { import = "astrocommunity.pack.json" },
+  { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.debugging.nvim-dap-virtual-text" },
+  { import = "astrocommunity.recipes.vscode" },
+  { import = "astrocommunity.terminal-integration.vim-tmux-navigator" },
 }
