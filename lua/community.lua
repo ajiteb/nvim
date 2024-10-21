@@ -5,6 +5,8 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
+  { import = "astrocommunity.pack.nvchad-ui" },
+  { import = "astrocommunity.motion.nvim-surround" },
   { import = "astrocommunity.pack.ansible" },
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.docker" },
@@ -18,4 +20,5 @@ return {
   { import = "astrocommunity.debugging.nvim-dap-virtual-text" },
   { import = "astrocommunity.recipes.vscode" },
   { import = "astrocommunity.terminal-integration.vim-tmux-navigator" },
+  -- { import = "astrocommunity.color.transparent-nvim" },
 }

@@ -5,10 +5,19 @@
 return {
 
   -- == Examples of Adding Plugins ==
+  -- {
+  --   "folke/tokyonight.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {
+  --     transparent = true,
+  --     style = "moon",
+  --   },
+  -- },
   {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
+    "nvchad/ui",
+    opts = {
+      base46 = { theme = "dark_horizon", style = "bordered" },
+    },
   },
 }
