@@ -20,6 +20,7 @@ return {
         "lua_ls",
         "marksman",
         "pyright",
+        "spectral",
         "vimls",
         "yamlls",
         -- add more arguments for adding more language servers
@@ -48,7 +49,7 @@ return {
     opts = {
       -- add more things to the ensure_installed table protecting against community packs modifying it
       ensure_installed = {
-        "python",
+        "delve",
         -- add more arguments for adding more debuggers
       },
     },
