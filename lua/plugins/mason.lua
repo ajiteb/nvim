@@ -4,53 +4,42 @@
 return {
   -- use mason-lspconfig to configure LSP installations
   {
-    "williamboman/mason-lspconfig.nvim",
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
     -- overrides `require("mason-lspconfig").setup(...)`
     opts = {
       -- add more things to the ensure_installed table protecting against community packs modifying it
       ensure_installed = {
-        "ansiblels",
-        "azure_pipelines_ls",
-        "bashls",
-        "dockerls",
+        -- install language servers
+        "ansible-language-server",
+        "azure-pipelines-language-server",
+        "bash-language-server",
+        "docker-compose-language-service",
+        "dockerfile-language-server",
         "gopls",
-        "helm_ls",
-        "jqls",
-        "jsonls",
-        "lua_ls",
+        "helm-ls",
+        "jq-lsp",
+        "json-lsp",
+        "lua-language-server",
         "marksman",
         "pyright",
-        "spectral",
-        "vimls",
-        "yamlls",
-        -- add more arguments for adding more language servers
-      },
-    },
-  },
-  -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
-  {
-    "jay-babu/mason-null-ls.nvim",
-    -- overrides `require("mason-null-ls").setup(...)`
-    opts = {
-      -- add more things to the ensure_installed table protecting against community packs modifying it
-      ensure_installed = {
+        -- "spectral-language-server",
+        "vim-language-server",
+        "yaml-language-server",
+
+        -- install formatters
         "prettier",
         "prettierd",
         "shellcheck",
         "shfmt",
         "stylua",
-        -- add more arguments for adding more null-ls sources
-      },
-    },
-  },
-  {
-    "jay-babu/mason-nvim-dap.nvim",
-    -- overrides `require("mason-nvim-dap").setup(...)`
-    opts = {
-      -- add more things to the ensure_installed table protecting against community packs modifying it
-      ensure_installed = {
+
+        -- install debuggers
+        "debugpy",
         "delve",
-        -- add more arguments for adding more debuggers
+
+        -- install any other package
+        "tree-sitter-cli",
+        -- add more arguments for adding more language servers
       },
     },
   },

@@ -5,19 +5,28 @@
 return {
 
   -- == Examples of Adding Plugins ==
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      transparent = true,
+      style = "moon",
+    },
+  },
   -- {
-  --   "folke/tokyonight.nvim",
-  --   lazy = false,
-  --   priority = 1000,
+  --   "nvchad/ui",
   --   opts = {
-  --     transparent = true,
-  --     style = "moon",
+  --     base46 = { theme = "dark_horizon", style = "bordered" },
   --   },
   -- },
   {
-    "nvchad/ui",
-    opts = {
-      base46 = { theme = "dark_horizon", style = "bordered" },
-    },
+    "towolf/vim-helm",
+    ft = "helm",
+  },
+  {
+    "github/copilot.vim",
+    event = "VeryLazy",
+    version = "*",
   },
 }

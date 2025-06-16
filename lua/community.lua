@@ -5,7 +5,7 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.pack.nvchad-ui" },
+  -- { import = "astrocommunity.pack.nvchad-ui" },
   { import = "astrocommunity.motion.nvim-surround" },
   { import = "astrocommunity.pack.ansible" },
   { import = "astrocommunity.pack.bash" },

@@ -7,9 +7,9 @@
 return {
   "AstroNvim/astroui",
   ---@type AstroUIOpts
-  -- opts = {
-  -- change colorscheme
-  -- colorscheme = "tokyonight-night",
-  -- colorscheme = "tokyonight",
-  -- },
+  opts = {
+    -- change colorscheme
+    colorscheme = "tokyonight-night",
+    -- colorscheme = "tokyonight",
+  },
 }
