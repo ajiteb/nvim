@@ -1,9 +1,24 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
 --       as this provides autocomplete and documentation while editing
+
+local function yaml_ft(path, bufnr)
+  local regex
+
+  local path_regex = vim.regex "\\(tasks\\|roles\\|handlers\\)/"
+  if path_regex:match_str(path) then return "yaml.ansible" end
+
+  local content = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
+  if type(content) == "table" then content = table.concat(content, "\n") end
+
+  regex = vim.regex "ansible\\.builtin\\.\\|tasks:"
+  if regex:match_str(content) then return "yaml.ansible" end
+  regex = vim.regex "^(parameters\\|pool\\|stages\\|stage\\|jobs\\|steps):"
+  if regex:match_str(content) then return "yaml.azure" end
+
+  return "yaml"
+end
 
 ---@type LazySpec
 return {
@@ -15,7 +30,7 @@ return {
       large_buf = { size = 1024 * 500, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
       autopairs = true, -- enable autopairs at start
       cmp = true, -- enable completion at start
-      diagnostics_mode = 3, -- diagnostic mode on start (0 = off, 1 = no signs/virtual text, 2 = no virtual text, 3 = on)
+      -- diagnostics_mode = 3, -- diagnostic mode on start (0 = off, 1 = no signs/virtual text, 2 = no virtual text, 3 = on)
       highlighturl = true, -- highlight URLs at start
       notifications = true, -- enable notifications at start
     },
@@ -23,6 +38,12 @@ return {
     diagnostics = {
       virtual_text = true,
       underline = true,
+    },
+    filetypes = {
+      extension = {
+        yml = yaml_ft,
+        yaml = yaml_ft,
+      },
     },
     -- vim options can be configured here
     options = {
