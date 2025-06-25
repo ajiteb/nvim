@@ -21,4 +21,5 @@ return {
   { import = "astrocommunity.recipes.vscode" },
   { import = "astrocommunity.terminal-integration.vim-tmux-navigator" },
   -- { import = "astrocommunity.color.transparent-nvim" },
+  { import = "astrocommunity.colorscheme.sonokai" },
 }
