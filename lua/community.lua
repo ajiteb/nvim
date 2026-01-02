@@ -22,4 +22,5 @@ return {
   { import = "astrocommunity.terminal-integration.vim-tmux-navigator" },
   -- { import = "astrocommunity.color.transparent-nvim" },
   { import = "astrocommunity.colorscheme.sonokai" },
+  { import = "astrocommunity.snippet.mini-snippets" },
 }
