@@ -11,7 +11,8 @@ return {
   },
   {
     "github/copilot.vim",
-    event = "VeryLazy",
-    version = "*",
+    lazy = false,
+    event = "InsertEnter",
+    -- version = "*",
   },
 }
