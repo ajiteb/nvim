@@ -19,7 +19,7 @@ return {
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.debugging.nvim-dap-virtual-text" },
   { import = "astrocommunity.recipes.vscode" },
-  { import = "astrocommunity.terminal-integration.vim-tmux-navigator" },
+  -- { import = "astrocommunity.terminal-integration.vim-tmux-navigator" },
   -- { import = "astrocommunity.colorscheme.github-nvim-theme" },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   { import = "astrocommunity.snippet.mini-snippets" },
