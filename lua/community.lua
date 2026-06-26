@@ -7,6 +7,7 @@ return {
   "AstroNvim/astrocommunity",
   -- { import = "astrocommunity.pack.nvchad-ui" },
   { import = "astrocommunity.motion.nvim-surround" },
+  { import = "astrocommunity.recipes.ai" },
   { import = "astrocommunity.pack.ansible" },
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.docker" },

@@ -19,7 +19,6 @@ return {
     priority = 1000,
     opts = {
       transparent = true,
-      style = "moon",
       on_colors = function(colors) colors.border = colors.fg_gutter end,
     },
   },

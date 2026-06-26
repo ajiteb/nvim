@@ -9,10 +9,4 @@ return {
     "towolf/vim-helm",
     ft = "helm",
   },
-  {
-    "github/copilot.vim",
-    lazy = false,
-    event = "InsertEnter",
-    -- version = "*",
-  },
 }
